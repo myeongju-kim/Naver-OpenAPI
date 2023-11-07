@@ -5,6 +5,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Collections;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 @Configuration
 public class NaverConfiguration {
 
@@ -16,9 +22,7 @@ public class NaverConfiguration {
 
     @Bean
     public RequestInterceptor requestInterceptor() {
-
         return requestTemplate -> {
-            requestTemplate.header("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
             requestTemplate.header("X-Naver-Client-Id", clientId);
             requestTemplate.header("X-Naver-Client-Secret", clientSecret);
         };

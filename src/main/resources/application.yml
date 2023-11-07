@@ -1,4 +1,9 @@
 naver:
-  client-id: "??~"
-  client-secret: "??~~"
-  url: https://openapi.naver.com/v1/
+  client-id: 5DLqs4oaQ_mAp7GYVX2p
+  client-secret: dXfLaE5am6
+  url: https://openapi.naver.com/v1
+
+
+logging:
+  level:
+    com.openapi.papago.naver.feign: DEBUG
